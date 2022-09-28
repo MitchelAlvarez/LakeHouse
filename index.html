@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake House</title>
+    <link rel="stylesheet" href="./css/style_home.css">
+    <script src="https://kit.fontawesome.com/d0df33e79a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <section class="navbar_logo">
+            <a href="index.html"><img src="./images/lakehouse.jpeg" alt="Lake_House_Logo"></a>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="./index.html"><i class="fa-solid fa-house">Home</i></a></li>
+                <li><a href="#"><i class="fa-solid fa-motorcycle">Order Online</i></a></li>
+                <li><a href="./menue2.html"><i class="fa-solid fa-sheet-plastic">Menue</i></a></li>
+                <li><a href="./contact_us.html"><i class="fa-solid fa-address-card">Contact Us</i></a></li>
+                <li><a href="./catering.html"><i class="fa-solid fa-fire-burner">Catering</i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="principal_message">
+            <h3>LAKE HOUSE - <a href="">ORDER NOW</a></h3>
+        </section>
+        <section class="grid-container">
+            <section class="grid-item slide">
+                <div class="meet_us">
+                    <h1>Come at every hour and find the best food and beer</h1>
+                </div>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./images/slide/breakfast.jpg">
+                        <div class="slide_text">Breakfast</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="./images/slide/bbq.jpg">
+                        <div class="slide_text">BBQ</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="./images/slide/beer.jpg">
+                        <div class="slide_text">Beer</div>
+                    </div>
+                    
+                </div>
+                <br>
+                    
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+            </section>
+            <section class="grid-item dish_day">
+                <div class="dish_text">
+                    <h1>Every day a special dish</h1>
+                    <h1>Ask for it!</h1>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="contact">
+
+        </section>
+        <section class="social_media">
+
+        </section>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+</html>
