@@ -1,0 +1,285 @@
+:root{
+    --clr-text: #3d3d3d;
+    --clr-primary: #c90101;
+    --clr-primary-dark: #6d0202;
+    --clr-accent: #179fdf;
+    --clr-accent-dark: #045170;
+    /*--ff-title: "BFNarrow", sans-serif;
+    --ff-serif: "Crimson Text", serif;
+    --ff-logo: "BetterFly", sans-serif;*/
+
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    /* font-family: var(--ff-serif); */
+    color: var(--clr-text);
+    background-color: rgb(194, 194, 181);
+    font-size: 1,125rem;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+/*section{
+    padding: 3em 1em;
+}*/
+
+/*img{
+    display: block;
+    max-width: 100%;
+}*/
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+p,
+b{
+   margin: .5em; 
+}
+
+h1{
+    font-family: Impact, fantasy;
+    font-size: 2em;
+  }
+
+/* navigation */
+header{
+    padding: 1em 0 2 em;
+}
+
+
+.grid-menu{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto; 
+    grid-row:auto;   
+}
+
+.grid-menue_item{
+    text-align:center; 
+    align-content: baseline;
+}
+
+.grid-menue_item>a{
+    /* display: inline-block; */
+        padding: 0.5em;
+        color: var(--clr-text);
+        text-decoration: none;
+}
+
+.grid-menue_item>a:hover,
+.grid-menue_item>a:focus{
+    color: var(--clr-accent);
+    text-decoration: underline;
+}
+
+.fa-sheet-plastic{
+    text-decoration: underline 5px;
+}
+/*------------------------------------*/
+        /*main*/
+.principal_message{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: 5em;
+    color: white;
+    background-color: #c90101;
+}
+
+.lk-menu{
+    display: grid;
+    grid-template-areas: '. . . . . . . . . . . . . . . . ';
+    grid-row:auto;
+    background-color: var(--clr-text);
+    color: var(--clr-primary);
+}
+
+.grid-lk_menue{
+    font-size: 20px;
+    text-align:center;
+    border: 1px solid white;
+    color: white;
+    align-content: center;
+}
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:  flex-end;
+    flex-direction: row;
+    grid-template-columns: auto auto;
+    grid-row:auto;
+    /* background-color: #2196F3; */
+}
+
+.grid-item {
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    flex: 50%;
+    padding: 10px;
+    font-size: 15px;
+    text-align:left;
+    position: absolute;
+  }
+
+  .grid-item>div{
+    width: 550px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    left: 2em;
+  }
+  .grid-item>.message{
+    width: 550px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transition: 0;
+
+  }
+
+  .grid-item>div:hover{
+        box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  /* .grid-item>.message:hover{
+    0 12px 20px 0 rgba(0, 0, 0, 0.2)
+
+    } */
+    
+    /* grif-torm-bo3,0, /\ */
+
+  .grid-item>div>h1{
+    color: var(--clr-primary);
+  }
+  .grid-item>p{
+    padding-top: 2px;
+  }
+
+  .item1{
+    top: 18em
+}
+
+.item2{
+    top: 18em;
+    left: 45em;;
+}
+.item3{
+    top: 39em;
+}
+.item4
+{
+    top: 42.3em;
+    left: 45em;;  
+}
+.item5{
+    top: 56.5em;
+}
+.item6{
+    top: 102em;
+}
+.item7{
+    top: 98.5em;
+    left: 45em;;
+}
+.item8{
+    top: 118em;
+}
+.item9{
+    top: 145em;
+    left: 45em;;
+     
+}
+.item10{
+    top: 156em;
+}
+.item11{
+    top: 156em;
+    left: 45em;;
+     
+}
+
+.message>h2{
+    color: white;
+    background-color: var(--clr-primary);
+}
+
+/* gotop*/
+.go-top_container{
+    position: fixed;
+    bottom:4rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+}
+
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background: var(--clr-primary-dark);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+}
+
+.go-top-button i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go-top-button{
+    animation: popup .35 ease-in-out;
+    width: 3.6rem;
+    height: 3.6rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 8rem;
+        height: 8rem; 
+    }
+    100%{
+        width: 3.6rem;
+        height: 3.6rem; 
+    }
+}
+
+@media only screen and (max-width:600px){/*responsive*/
+    
+    .text {
+            font-size: 11px;
+        }
+
+        .grid-container{
+            grid-template-columns: auto;
+        }
+    }
+

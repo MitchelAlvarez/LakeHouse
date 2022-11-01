@@ -49,44 +49,29 @@ header{
     padding: 1em 0 2 em;
 }
 
-/* main{
-    background-image: url(../images/fondos/fondo-pergamino3-min.jpg);
-    background-size:100% auto;
-} */
-.grid-menu{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto; 
-    grid-row:auto;   
-}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    }
 
-.grid-menue_item{
-    text-align:center; 
-    align-content: baseline;
-}
-
-.grid-menue_item>a{
-        display: grid;
-        grid-template-columns: auto auto;
+nav a{
+        display: inline-block;
         padding: 0.5em;
         color: var(--clr-text);
         text-decoration: none;
 }
-
-.grid-menue_item>a:hover,
-.grid-menue_item>a:focus{
+    
+nav a:hover,
+nav a:focus{
     color: var(--clr-accent);
     text-decoration: underline;
 }
-
-/* .grid-menue_item>a>i{
-    text-align: right;
-    padding-top: .9rem;
-    font-size: 22px;
+.navbar_logo>a>img{
+    height: 9rem;
 }
-.grid-menue_item>a>p{
-    text-align: left;
-    font-size: 25px;
-} */
 
 .fa-sheet-plastic{
     text-decoration: underline 1px;

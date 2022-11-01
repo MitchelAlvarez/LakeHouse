@@ -86,10 +86,10 @@ nav a:focus{
     text-decoration: underline 1px;
     color: var(--clr-primary-dark);
 }
-/* main,footer{
-    background-image: url(../images/fondos/fondo-pergamino3-min.jpg);
-    background-size:100% auto;
-} */
+.navbar_logo>a>img{
+    height: 9rem;
+}
+
 .principal_message{
     padding-top: 1em;
     padding-bottom: 1em;

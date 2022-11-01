@@ -50,7 +50,8 @@ header{
     padding: 1em 0 2 em;
 }
 
-.grid-menu{
+/* Todo esto es un menu con grid en vez de flex*/
+/* .grid-menu{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto; 
     grid-row:auto;   
@@ -62,7 +63,6 @@ header{
 }
 
 .grid-menue_item>a{
-    /* display: inline-block; */
         padding: 0.5em;
         color: var(--clr-text);
         text-decoration: none;
@@ -72,11 +72,36 @@ header{
 .grid-menue_item>a:focus{
     color: var(--clr-accent);
     text-decoration: underline;
+} */
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    }
+
+nav a{
+        display: inline-block;
+        padding: 0.5em;
+        color: var(--clr-text);
+        text-decoration: none;
+}
+    
+nav a:hover,
+nav a:focus{
+    color: var(--clr-accent);
+    text-decoration: underline;
 }
 
 .fa-address-card{
     text-decoration: underline 1px;
     color: var(--clr-primary-dark);
+}
+
+.navbar_logo>a>img{
+    height: 9rem;
 }
 
 /* main{
